@@ -1,0 +1,36 @@
+entities
+	prop prop_cylinder05x1
+		name en cylinder 0.5x1
+		name fr cylindre 0.5x1
+		textureDiffuse res/textures/white_lightened.png
+		model res/models/cylinder05x1.obj
+		collisionShape cylinderShape
+		collisionBounds 0.5 1
+	prop prop_plate05x005x1
+		name en plate 0.5x1x0.05
+		name fr planche 0.5x1x0.05
+		textureDiffuse res/textures/white_lightened.png
+		model res/models/plate05x1x005.obj
+		collisionShape boxShape
+		collisionBounds 0.5 0.05 1
+	prop prop_plate1x005x1
+		name en plate 1x1x0.05
+		name fr planche 1x1x0.05
+		textureDiffuse res/textures/white_lightened.png
+		model res/models/plate1x1x005.obj
+		collisionShape boxShape
+		collisionBounds 1 0.05 1
+	prop pl_cube
+		name en Cube (Prisoner's Laboratory)
+		name fr Cube (Prisoner's Laboratory)
+		textureDiffuse res/textures/cubedev1.png
+		model res/models/pl_cube.obj
+		collisionShape boxShape
+		collisionBounds 0.632 0.632 0.632
+	prop default_cube
+		name en Default cube
+		name fr Cube par défaut
+		textureDiffuse res/textures/cubedev1.png
+		model res/models/pl_cube.obj
+		collisionShape boxShape
+		collisionBounds 0.632 0.632 0.632

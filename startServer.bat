@@ -1,0 +1,1 @@
+java -jar creatibox.jar --server

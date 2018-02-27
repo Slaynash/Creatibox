@@ -9,6 +9,8 @@ import java.net.URI;
 import java.net.URL;
 import java.net.URLClassLoader;
 
+import fr.slaynash.creatibox.common.LogTimer;
+
 public class JarLoader {
 	public static void loadJar(String path){
 		File f = new File(path);
@@ -20,27 +22,27 @@ public class JarLoader {
 			Method method = urlClass.getDeclaredMethod("addURL", new Class[]{URL.class});
 			method.setAccessible(true);
 			method.invoke(urlClassLoader, new Object[]{u.toURL()});
-			System.out.println("[JarLoader] jar file "+f.getName()+" loaded.");
+			System.out.println(LogTimer.getTimeForLog()+"[JarLoader] jar file "+f.getName()+" loaded.");
 		} catch (IllegalAccessException e) {
-			System.out.println("[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
+			System.out.println(LogTimer.getTimeForLog()+"[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
 			e.printStackTrace();
 		} catch (IllegalArgumentException e) {
-			System.out.println("[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
+			System.out.println(LogTimer.getTimeForLog()+"[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
-			System.out.println("[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
+			System.out.println(LogTimer.getTimeForLog()+"[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
 			e.printStackTrace();
 		} catch (MalformedURLException e) {
-			System.out.println("[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
+			System.out.println(LogTimer.getTimeForLog()+"[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
 			e.printStackTrace();
 		} catch (NoSuchMethodException e) {
-			System.out.println("[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
+			System.out.println(LogTimer.getTimeForLog()+"[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
 			e.printStackTrace();
 		} catch (SecurityException e) {
-			System.out.println("[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
+			System.out.println(LogTimer.getTimeForLog()+"[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
-			System.out.println("[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
+			System.out.println(LogTimer.getTimeForLog()+"[JarLoader] Unable to load jar file at "+f.getAbsolutePath()+" ! D:");
 			e.printStackTrace();
 		}
 	}
